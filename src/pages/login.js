@@ -1,13 +1,13 @@
-import React from 'react';
-import './Login.css'; 
+import React from "react";
+import "../pages/login.css";
 
 function Login() {
   const handleForgotPasswordClick = () => {
-    window.location.href = '/forgot-password'; 
+    window.location.href = "/forgot-password";
   };
 
   const handleSignUpClick = () => {
-    window.location.href = '/sign-up'; 
+    window.location.href = "/sign-up";
   };
 
   return (
@@ -29,17 +29,27 @@ function Login() {
           <div className="forgot-password">
             <span
               onClick={handleForgotPasswordClick}
-              style={{ cursor: 'pointer', color: '#007bff', textDecoration: 'none' }}
+              style={{
+                cursor: "pointer",
+                color: "#007bff",
+                textDecoration: "none",
+              }}
             >
               forgot password?
             </span>
           </div>
-          <button type="submit" className="login-button">Log In</button>
+          <button type="submit" className="login-button">
+            Log In
+          </button>
           <div className="create-account">
-            Create new account?{' '}
+            Create new account?{" "}
             <span
               onClick={handleSignUpClick}
-              style={{ cursor: 'pointer', color: '#007bff', textDecoration: 'none' }}
+              style={{
+                cursor: "pointer",
+                color: "#007bff",
+                textDecoration: "none",
+              }}
             >
               Sign up.
             </span>

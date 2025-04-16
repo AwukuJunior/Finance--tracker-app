@@ -1,0 +1,72 @@
+/* homepage.css */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+/* Sidebar layout */
+.sidebar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+/* Sidebar component */
+.sidebar > *:first-child {
+  width: 250px;
+  background-color: #1e293b; /* dark blue-gray */
+  color: white;
+  min-height: 100%;
+  padding: 1rem;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header + Main content wrapper */
+.header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+/* Header component */
+.header > *:first-child {
+  height: 60px;
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Main content area */
+.maincontent {
+  flex: 1;
+  padding: 1rem;
+  background-color: #f9fafb;
+  overflow-y: auto;
+}
+
+/* Scrollbar style (optional) */
+.maincontent::-webkit-scrollbar {
+  width: 6px;
+}
+.maincontent::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.4); /* slate gray */
+  border-radius: 3px;
+}
