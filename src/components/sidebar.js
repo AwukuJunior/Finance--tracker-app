@@ -13,7 +13,7 @@ function Sidebar() {
         <Link to="/homepage/transaction" className="sidebar-link">
           Transaction
         </Link>
-        <Link to="/settings" className="sidebar-link">
+        <Link to="/homepage/settings" className="sidebar-link">
           Settings
         </Link>
         <Link to="/signout" className="sidebar-link signout-link">
