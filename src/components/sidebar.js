@@ -7,11 +7,11 @@ function Sidebar() {
     <div className="sidebar-container">
       <h2 className="sidebar-title">MyApp</h2>
       <nav className="sidebar-nav">
-        <Link to="/" className="sidebar-link">
+        <Link to="/homepage/dashboard" className="sidebar-link">
           Dashboard
         </Link>
-        <Link to="/profile" className="sidebar-link">
-          Profile
+        <Link to="/homepage/transaction" className="sidebar-link">
+          Transaction
         </Link>
         <Link to="/settings" className="sidebar-link">
           Settings

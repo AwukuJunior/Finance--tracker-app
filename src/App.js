@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/dashboard";
 import Login from "./pages/login";
 import Homepage from "./layout/homepage";
+import TransactionPage from "./components/transaction";
 
 function App() {
   return (
@@ -12,8 +13,10 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         {/* Protected / Nested Route */}
-        <Route path="/" element={<Homepage />}>
+        <Route path="/homepage" element={<Homepage />}>
           <Route index element={<Dashboard />} />
+          <Route path="/homepage/dashboard" element={<Dashboard />} />
+          <Route path="/homepage/transaction" element={<TransactionPage />} />
         </Route>
       </Routes>
     </Router>
