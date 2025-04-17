@@ -1,49 +1,231 @@
 .dashboard-container {
-  padding: 2rem;
-  background-color: #f9fafb;
-  min-height: 100%;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
-.dashboard-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #1f2937; /* slate-800 */
-  margin-bottom: 0.5rem;
-}
-
-.dashboard-welcome {
-  font-size: 1.1rem;
-  color: #475569; /* slate-600 */
-  margin-bottom: 2rem;
-}
-
-.dashboard-cards {
+.summary-cards {
   display: flex;
-  gap: 1.5rem;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.summary-card {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+}
+
+.summary-card.income {
+  border-top: 4px solid #2ecc71;
+}
+
+.summary-card.expenses {
+  border-top: 4px solid #e74c3c;
+}
+
+.summary-card.balance {
+  border-top: 4px solid #3498db;
+}
+
+.card-icon {
+  font-size: 28px;
+  margin-right: 15px;
+  background: rgba(0, 0, 0, 0.05);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #777;
+  font-weight: 500;
+}
+
+.card-content h2 {
+  margin: 5px 0 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.dashboard-main {
+  display: flex;
+  gap: 20px;
+}
+
+.dashboard-left {
+  flex: 2;
+}
+
+.dashboard-right {
+  flex: 1;
+}
+
+.graph-section, .purchases-section, .tip-section, .transactions-section {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.graph-section h3, .purchases-section h3, .tip-section h3, .transactions-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.graph-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.graph-buttons button {
+  background: #f1f1f1;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.graph-buttons button.active {
+  background: #3498db;
+  color: white;
+}
+
+.bar-graph {
+  display: flex;
+  height: 200px;
+  align-items: flex-end;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.bar {
+  width: 100%;
+  background: #3498db;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+}
+
+.bar-label {
+  margin-top: 5px;
+  font-size: 10px;
+  color: #777;
+}
+
+.purchase-circles {
+  display: flex;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
-.dashboard-card {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.75rem;
-  padding: 1.25rem 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  width: 220px;
-  transition: transform 0.2s ease;
+.purchase-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #3498db;
 }
 
-.dashboard-card:hover {
-  transform: translateY(-4px);
+.circle-amount {
+  font-weight: 600;
+  font-size: 14px;
 }
 
-.dashboard-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #1e293b; /* slate-900 */
+.circle-label {
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
 }
 
-.dashboard-card p {
-  font-size: 0.95rem;
-  color: #64748b; /* slate-500 */
+.daily-tip {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  font-style: italic;
+  color: #555;
+}
+
+.transactions-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.transaction-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.transaction-details {
+  flex: 1;
+}
+
+.transaction-name {
+  font-weight: 500;
+}
+
+.transaction-category {
+  font-size: 12px;
+  color: #777;
+}
+
+.transaction-amount {
+  font-weight: 600;
+}
+
+.transaction-amount.positive {
+  color: #2ecc71;
+}
+
+.transaction-amount.negative {
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .summary-cards {
+    flex-direction: column;
+  }
+  
+  .dashboard-main {
+    flex-direction: column;
+  }
 }

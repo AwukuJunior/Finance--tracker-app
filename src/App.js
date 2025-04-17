@@ -3,7 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/dashboard";
 import Login from "./pages/login";
 import Homepage from "./layout/homepage";
-import TransactionPage from "./components/transaction";
+import Transactions from "./components/transaction";
+import Analytics from "./components/analytics";
+import Tips from "./components/tips";
+import Settings from "./components/settings";
+import SavingGoals from "./components/savingGoals";
 
 function App() {
   return (
@@ -16,9 +20,14 @@ function App() {
         <Route path="/homepage" element={<Homepage />}>
           <Route index element={<Dashboard />} />
           <Route path="/homepage/dashboard" element={<Dashboard />} />
-          <Route path="/homepage/transactions" element={<TransactionPage />} />
+          <Route path="/homepage/transactions" element={<Transactions />} />
+          <Route path="/homepage/analytics" element={<Analytics />} />
+          <Route path="/homepage/tips" element={<Tips />} />
+          <Route path="/homepage/settings" element={<Settings/>} />
+          <Route path="/homepage/savingGoals" element={<SavingGoals/>} />
         </Route>
       </Routes>
+
     </Router>
   );
 }

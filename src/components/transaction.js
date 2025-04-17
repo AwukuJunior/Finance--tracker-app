@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../components/transaction.css";
-const TransactionPage = () => {
+const Transactions = () => {
   const [transactions, setTransactions] = useState([]);
   const [isAddingNew, setIsAddingNew] = useState(false);
   const [newTransaction, setNewTransaction] = useState({
@@ -179,4 +179,4 @@ const TransactionPage = () => {
   );
 };
 
-export default TransactionPage;
+export default Transactions;

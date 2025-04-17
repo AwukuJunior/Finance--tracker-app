@@ -26,7 +26,7 @@ const Sidebar = ({ open, onClose, drawerWidth = 240 }) => {
   const navigate = useNavigate();
 
   const menuItems = [
-    { text: "Home", icon: <HomeIcon />, path: "/homepage" },
+    { text: "Home", icon: <HomeIcon />, path: "/homepage"  },
     { text: "Dashboard", icon: <DashboardIcon />, path: "/homepage/dashboard" },
     {
       text: "Transactions",
@@ -43,7 +43,7 @@ const Sidebar = ({ open, onClose, drawerWidth = 240 }) => {
     {
       text: "Saving Goals",
       icon: <SavingsIcon />,
-      path: "/homepage/saving-goals",
+      path: "/homepage/savingGoals",
     },
   ];
 
@@ -76,7 +76,7 @@ const Sidebar = ({ open, onClose, drawerWidth = 240 }) => {
             variant="h6"
             sx={{ color: "#0096FF", fontWeight: "bold" }}
           >
-            Spendify
+            SmartSave
           </Typography>
         </Box>
 
@@ -90,7 +90,7 @@ const Sidebar = ({ open, onClose, drawerWidth = 240 }) => {
             <ListItem key={item.text} disablePadding>
               <ListItemButton
                 onClick={() => handleNavigation(item.path)}
-                className={location.pathname === item.path ? "active-link" : ""}
+                className={location.pathname === item.path ? "active-link" : "" }
               >
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.text} />
