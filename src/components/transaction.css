@@ -127,7 +127,7 @@
 }
 
 .transaction-type-buttons button:first-child {
-  background-color: #28a745; /* Expense color */
+  background-color:rgb(68, 72, 69); /* Expense color */
   color: white;
 }
 
@@ -177,7 +177,7 @@
 }
 
 .save-button {
-  background-color: #28a745;
+  background-color:rgb(63, 66, 64);
   color: white;
 }
 
